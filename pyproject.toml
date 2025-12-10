@@ -1,0 +1,41 @@
+[project]
+name = "shadow-ai-governance-proxy"
+version = "0.1.0"
+description = "Synthetic Shadow AI discovery and governance proxy (educational)"
+requires-python = ">=3.10"
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+skip-string-normalization = true
+
+[tool.isort]
+profile = "black"
+line_length = 100
+combine_as_imports = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]  # managed by Black
+exclude = [
+  ".git",
+  ".venv",
+  "dist",
+  "build",
+  "node_modules",
+  "dashboard",
+]
+
+[tool.mypy]
+python_version = "3.10"
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+ignore_missing_imports = true
+exclude = ["dashboard", "node_modules", "build", "dist"]
+
+

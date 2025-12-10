@@ -1,0 +1,17 @@
+proxy:
+  listen: "0.0.0.0:8899"
+  mitm: false  # set true for lab-only MITM via proxy.py
+  whitelist:
+    - OpenAI
+    - Azure OpenAI
+    - Google Gemini
+policies:
+  block_external: true
+  block_secrets_threshold: 0.6
+  redact_pii_threshold: 0.2
+  redact_secret_threshold: 0.2
+logging:
+  level: INFO
+  jsonl_path: governance_logs.jsonl
+  csv_path: governance_logs.csv
+
