@@ -39,6 +39,8 @@ jobs:
         run: isort --check-only proxy tests
 
       - name: Run pytest
+        env:
+          PYTHONPATH: .
         run: pytest tests
 
   dashboard-lint:

@@ -73,6 +73,7 @@ Opens a synthetic live feed of policy decisions; wire to real WebSocket events i
 
 ## Tests
 ```bash
+export PYTHONPATH=.
 pytest tests
 ```
 All tests use synthetic payloads only.
